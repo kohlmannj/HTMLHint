@@ -1,6 +1,6 @@
 {
     "name": "@kohlmannj/htmlhint",
-    "version": "0.10.0",
+    "version": "0.11.0",
     "description": "A Static Code Analysis Tool for HTML",
     "main": "./lib/index.js",
     "bin": {
