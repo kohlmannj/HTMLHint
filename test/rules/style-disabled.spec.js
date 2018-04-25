@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "style-disabled",
+const ruldId = "style-disabled",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

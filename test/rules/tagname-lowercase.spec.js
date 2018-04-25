@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "tagname-lowercase",
+const ruldId = "tagname-lowercase",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

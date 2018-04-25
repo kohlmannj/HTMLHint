@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "doctype-first",
+const ruldId = "doctype-first",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

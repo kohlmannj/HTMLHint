@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "title-require",
+const ruldId = "title-require",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

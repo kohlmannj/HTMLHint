@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "head-script-disabled",
+const ruldId = "head-script-disabled",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

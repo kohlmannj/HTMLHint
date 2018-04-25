@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "tag-pair",
+const ruldId = "tag-pair",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

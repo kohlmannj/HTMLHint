@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "attr-no-duplication",
+const ruldId = "attr-no-duplication",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

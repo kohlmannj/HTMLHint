@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "id-class-ad-disabled",
+const ruldId = "id-class-ad-disabled",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

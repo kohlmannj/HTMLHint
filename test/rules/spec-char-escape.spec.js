@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "spec-char-escape",
+const ruldId = "spec-char-escape",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "tag-self-close",
+const ruldId = "tag-self-close",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

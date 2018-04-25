@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "inline-script-disabled",
+const ruldId = "inline-script-disabled",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

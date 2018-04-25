@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "attr-value-double-quotes",
+const ruldId = "attr-value-double-quotes",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

@@ -1,12 +1,23 @@
 {
-  "moduleId": "HTMLHint",
   "presets": [
     ["env", {
-      "modules": "umd",
+      "modules": false,
       "targets": {
         "browsers": ["last 2 versions"]
       }
     }],
     "stage-1"
-  ]
+  ],
+  "env": {
+      "test": {
+        "presets": [
+            ["env", {
+              "targets": {
+                "node": "8"
+              }
+            }],
+            "stage-1"
+          ]
+      }
+  }
 }

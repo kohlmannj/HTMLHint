@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "attr-unsafe-chars",
+const ruldId = "attr-unsafe-chars",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

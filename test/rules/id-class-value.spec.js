@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "id-class-value",
+const ruldId = "id-class-value",
     ruleOptionsUnderline = {},
     ruleOptionsDash = {},
     ruleOptionsHump = {},

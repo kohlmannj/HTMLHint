@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "csslint",
+const ruldId = "csslint",
     ruleOptions = {};
 
 ruleOptions[ruldId] = {

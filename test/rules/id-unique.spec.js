@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "id-unique",
+const ruldId = "id-unique",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

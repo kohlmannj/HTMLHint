@@ -1,4 +1,4 @@
-/* jshint -W079 */
+/* global VERSION, RELEASE */
 /**
  * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
  * MIT Licensed
@@ -10,8 +10,8 @@ import Reporter from "./reporter";
 const repeatStr = (n, str) => new Array(n + 1).join(str || " ");
 
 export default class HTMLHint {
-    static version = "@VERSION";
-    static release = "@RELEASE";
+    static version = VERSION || "@VERSION";
+    static release = RELEASE || "@RELEASE";
     static rules = {};
 
     // 默认配置

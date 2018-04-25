@@ -6,7 +6,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "alt-require",
+const ruldId = "alt-require",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;

@@ -5,7 +5,7 @@
 
 import HTMLHint from "../../src";
 
-let ruldId = "src-not-empty",
+const ruldId = "src-not-empty",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;
