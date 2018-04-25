@@ -6,6 +6,9 @@
     "bin": {
         "htmlhint": "./bin/htmlhint"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "clean": "rimraf lib",
         "build": "babel src --out-dir lib",
