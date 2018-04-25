@@ -10,8 +10,8 @@ import Reporter from "./reporter";
 const repeatStr = (n, str) => new Array(n + 1).join(str || " ");
 
 export default class HTMLHint {
-    static version = VERSION || "@VERSION";
-    static release = RELEASE || "@RELEASE";
+    static version = typeof VERSION === "string" ? VERSION : "@VERSION";
+    static release = typeof RELEASE === "string" ? RELEASE : "@RELEASE";
     static rules = {};
 
     // 默认配置
