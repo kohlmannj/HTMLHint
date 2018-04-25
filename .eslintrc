@@ -19,7 +19,6 @@
         "no-control-regex": "off",
         "no-cond-assign": "off",
         "no-lonely-if": "off",
-        "no-use-before-define": "off",
         "no-param-reassign": "off",
         "prefer-destructuring": "off",
         "no-nested-ternary": "off",

@@ -3,32 +3,28 @@
  * MIT Licensed
  */
 
-var expect  = require("expect.js");
+import HTMLHint from "../../src";
 
-var HTMLHint  = require("../../index").HTMLHint;
-
-var ruldId = 'csslint',
+let ruldId = "csslint",
     ruleOptions = {};
 
 ruleOptions[ruldId] = {
-        "display-property-grouping": true,
-        "known-properties": true
-    };
+    "display-property-grouping": true,
+    "known-properties": true,
+};
 
-describe('Rules: '+ruldId, function(){
-
-    it('should result in an error', function(){
-        var code = 'a<style> \r\n body{color:red1;\r\ndisplay:inline;height:100px;}</style>b';
-        var messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages.length).to.be(2);
-        expect(messages[0].rule.id).to.be(ruldId);
-        expect(messages[0].line).to.be(2);
-        expect(messages[0].col).to.be(7);
-        expect(messages[0].type).to.be('warning');
-        expect(messages[1].rule.id).to.be(ruldId);
-        expect(messages[1].line).to.be(3);
-        expect(messages[1].col).to.be(16);
-        expect(messages[1].type).to.be('warning');
+describe(`Rules: ${ruldId}`, () => {
+    test("should result in an error", () => {
+        const code = "a<style> \r\n body{color:red1;\r\ndisplay:inline;height:100px;}</style>b";
+        const messages = HTMLHint.verify(code, ruleOptions);
+        expect(messages).toHaveLength(2);
+        expect(messages[0].rule.id).toBe(ruldId);
+        expect(messages[0].line).toBe(2);
+        expect(messages[0].col).toBe(7);
+        expect(messages[0].type).toBe("warning");
+        expect(messages[1].rule.id).toBe(ruldId);
+        expect(messages[1].line).toBe(3);
+        expect(messages[1].col).toBe(16);
+        expect(messages[1].type).toBe("warning");
     });
-
 });

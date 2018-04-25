@@ -3,7 +3,6 @@
  * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
  * MIT Licensed
  */
-
 export default class HTMLParser {
     constructor() {
         this._listeners = {};
@@ -42,6 +41,25 @@ export default class HTMLParser {
         let lastLineIndex = 0,
             line = 1;
         const arrBlocks = this._arrBlocks;
+
+        // 存储区块
+        const saveBlock = (type, raw, pos, data) => {
+            const col = pos - lastLineIndex + 1;
+            if (data === undefined) {
+                data = {};
+            }
+            data.raw = raw;
+            data.pos = pos;
+            data.line = line;
+            data.col = col;
+            arrBlocks.push(data);
+            this.fire(type, data);
+
+            while (regLine.exec(raw)) {
+                line += 1;
+                lastLineIndex = pos + regLine.lastIndex;
+            }
+        };
 
         this.fire("start", {
             pos: 0,
@@ -149,25 +167,6 @@ export default class HTMLParser {
             line,
             col: html.length - lastLineIndex + 1,
         });
-
-        // 存储区块
-        function saveBlock(type, raw, pos, data) {
-            const col = pos - lastLineIndex + 1;
-            if (data === undefined) {
-                data = {};
-            }
-            data.raw = raw;
-            data.pos = pos;
-            data.line = line;
-            data.col = col;
-            arrBlocks.push(data);
-            this.fire(type, data);
-
-            while (regLine.exec(raw)) {
-                line += 1;
-                lastLineIndex = pos + regLine.lastIndex;
-            }
-        }
     }
 
     // add event

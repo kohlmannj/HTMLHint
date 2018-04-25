@@ -3,30 +3,26 @@
  * MIT Licensed
  */
 
-var expect  = require("expect.js");
+import HTMLHint from "../../src";
 
-var HTMLHint  = require("../../index").HTMLHint;
-
-var ruldId = 'attr-no-duplication',
+let ruldId = "attr-no-duplication",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;
 
-describe('Rules: '+ruldId, function(){
-
-    it('Attribute name been duplication should result in an error', function(){
-        var code = '<a href="a" href="b">bbb</a>';
-        var messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages.length).to.be(1);
-        expect(messages[0].rule.id).to.be(ruldId);
-        expect(messages[0].line).to.be(1);
-        expect(messages[0].col).to.be(12);
+describe(`Rules: ${ruldId}`, () => {
+    test("Attribute name been duplication should result in an error", () => {
+        const code = '<a href="a" href="b">bbb</a>';
+        const messages = HTMLHint.verify(code, ruleOptions);
+        expect(messages).toHaveLength(1);
+        expect(messages[0].rule.id).toBe(ruldId);
+        expect(messages[0].line).toBe(1);
+        expect(messages[0].col).toBe(12);
     });
 
-    it('Attribute name not been duplication should not result in an error', function(){
-        var code = '<a href="a">bbb</a>';
-        var messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages.length).to.be(0);
+    test("Attribute name not been duplication should not result in an error", () => {
+        const code = '<a href="a">bbb</a>';
+        const messages = HTMLHint.verify(code, ruleOptions);
+        expect(messages).toHaveLength(0);
     });
-
 });

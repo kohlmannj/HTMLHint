@@ -3,48 +3,44 @@
  * MIT Licensed
  */
 
-var expect  = require("expect.js");
+import HTMLHint from "../../src";
 
-var HTMLHint  = require("../../index").HTMLHint;
-
-var ruldId = 'tag-pair',
+let ruldId = "tag-pair",
     ruleOptions = {};
 
 ruleOptions[ruldId] = true;
 
-describe('Rules: '+ruldId, function(){
+describe(`Rules: ${ruldId}`, () => {
+    test("No end tag should result in an error", () => {
+        let code = "<ul><li></ul><span>";
+        let messages = HTMLHint.verify(code, ruleOptions);
+        expect(messages).toHaveLength(2);
+        expect(messages[0].rule.id).toBe(ruldId);
+        expect(messages[0].line).toBe(1);
+        expect(messages[0].col).toBe(9);
+        expect(messages[1].rule.id).toBe(ruldId);
+        expect(messages[1].line).toBe(1);
+        expect(messages[1].col).toBe(20);
 
-    it('No end tag should result in an error', function(){
-        var code = '<ul><li></ul><span>';
-        var messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages.length).to.be(2);
-        expect(messages[0].rule.id).to.be(ruldId);
-        expect(messages[0].line).to.be(1);
-        expect(messages[0].col).to.be(9);
-        expect(messages[1].rule.id).to.be(ruldId);
-        expect(messages[1].line).to.be(1);
-        expect(messages[1].col).to.be(20);
-
-        code = '<div></div>\r\n<div>aaa';
+        code = "<div></div>\r\n<div>aaa";
         messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages[0].rule.id).to.be(ruldId);
-        expect(messages[0].line).to.be(2);
-        expect(messages[0].col).to.be(9);
+        expect(messages[0].rule.id).toBe(ruldId);
+        expect(messages[0].line).toBe(2);
+        expect(messages[0].col).toBe(9);
     });
 
-    it('No start tag should result in an error', function(){
-        var code = '</div>';
-        var messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages.length).to.be(1);
-        expect(messages[0].rule.id).to.be(ruldId);
-        expect(messages[0].line).to.be(1);
-        expect(messages[0].col).to.be(1);
+    test("No start tag should result in an error", () => {
+        const code = "</div>";
+        const messages = HTMLHint.verify(code, ruleOptions);
+        expect(messages).toHaveLength(1);
+        expect(messages[0].rule.id).toBe(ruldId);
+        expect(messages[0].line).toBe(1);
+        expect(messages[0].col).toBe(1);
     });
 
-    it('Tag be paired should not result in an error', function(){
-        var code = '<p>aaa</p>';
-        var messages = HTMLHint.verify(code, ruleOptions);
-        expect(messages.length).to.be(0);
+    test("Tag be paired should not result in an error", () => {
+        const code = "<p>aaa</p>";
+        const messages = HTMLHint.verify(code, ruleOptions);
+        expect(messages).toHaveLength(0);
     });
-
 });
