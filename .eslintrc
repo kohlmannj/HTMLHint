@@ -24,6 +24,7 @@
         "prefer-destructuring": "off",
         "no-nested-ternary": "off",
         "no-continue": "off",
+        "class-methods-use-this": "off",
         "import/no-extraneous-dependencies": [
             "error",
             {
