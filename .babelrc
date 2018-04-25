@@ -1,0 +1,12 @@
+{
+  "moduleId": "HTMLHint",
+  "presets": [
+    ["env", {
+      "modules": "umd",
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }],
+    "stage-1"
+  ]
+}

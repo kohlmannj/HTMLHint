@@ -1,0 +1,62 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb-base",
+        "prettier",
+        "plugin:jest/recommended"
+    ],
+    "env": {
+        "jest": true
+    },
+    "plugins": [
+        "jest",
+        "json",
+        "prettier"
+    ],
+    "rules": {
+        "no-underscore-dangle": "off",
+        "one-var": "off",
+        "no-control-regex": "off",
+        "no-cond-assign": "off",
+        "no-lonely-if": "off",
+        "no-use-before-define": "off",
+        "no-param-reassign": "off",
+        "prefer-destructuring": "off",
+        "no-nested-ternary": "off",
+        "no-continue": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "scripts/**",
+                    "test/**",
+                    "tests/**",
+                    "spec/**",
+                    "**/__tests__/**",
+                    "test.js",
+                    "test-*.js",
+                    "**/*.test.js",
+                    "**/*.spec.js",
+                    "**/webpack.config.js",
+                    "**/webpack.config.*.js",
+                    "**/rollup.config.js",
+                    "**/gulpfile.js",
+                    "**/gulpfile.*.js",
+                    "**/Gruntfile"
+                ],
+                "optionalDependencies": false,
+                "peerDependencies": true
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "bracketSpacing": true,
+                "printWidth": 100,
+                "singleQuote": false,
+                "tabWidth": 4,
+                "trailingComma": "es5"
+            }
+        ]
+    }
+}
