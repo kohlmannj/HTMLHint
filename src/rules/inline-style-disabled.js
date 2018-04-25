@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
-
 export default {
     id: "inline-style-disabled",
     description: "Inline style cannot be used.",

@@ -1,14 +1,9 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
 import { CSSLint } from "csslint";
 
 export default {
     id: "csslint",
     description: "Scan css with csslint.",
     init(parser, reporter, options) {
-        const self = this;
         parser.addListener("cdata", event => {
             if (event.tagName.toLowerCase() === "style") {
                 if (options !== undefined) {
@@ -22,7 +17,7 @@ export default {
                                 `[${error.rule.id}] ${error.message}`,
                                 styleLine + line,
                                 (line === 1 ? styleCol : 0) + error.col,
-                                self,
+                                this,
                                 error.evidence
                             );
                         });

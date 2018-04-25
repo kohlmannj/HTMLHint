@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
-
 export default {
     id: "id-class-value",
     description: "The id and class attribute values must meet the specified rules.",

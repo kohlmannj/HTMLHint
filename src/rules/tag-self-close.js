@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
-
 export default {
     id: "tag-self-close",
     description: "Empty tags must be self closed.",

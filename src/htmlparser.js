@@ -1,8 +1,3 @@
-/* jshint -W079 */
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
 export default class HTMLParser {
     constructor() {
         this._listeners = {};

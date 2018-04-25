@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
-
 export default {
     id: "title-require",
     description: "<title> must be present in <head> tag.",

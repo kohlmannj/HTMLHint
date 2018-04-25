@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
-
 export default {
     id: "id-unique",
     description: "The value of id attributes must be unique.",

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * Copyright (c) 2014, Takeshi Kurosawa <taken.spc@gmail.com>
- * MIT Licensed
- */
 export default {
     id: "alt-require",
     description:

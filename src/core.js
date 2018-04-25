@@ -1,8 +1,4 @@
 /* global VERSION, RELEASE */
-/**
- * Copyright (c) 2015, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
 import HTMLParser from "./htmlparser";
 import Reporter from "./reporter";
 

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2014, Yanis Wang <yanis.wang@gmail.com>
- * MIT Licensed
- */
-
 export default {
     id: "space-tab-mixed-disabled",
     description: "Do not mix tabs and spaces for indentation.",
